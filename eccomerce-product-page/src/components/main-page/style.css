@@ -1,0 +1,192 @@
+#containerSliderImages{
+    width: 400%;
+    display: flex;
+    position: relative;
+}
+#containerSliderImages img{
+    height: 350px;
+    width: 100%;
+}
+
+.containerArrows{
+    position: absolute;
+    width: 375px;
+    display: flex;
+    justify-content: space-between;
+    top: 13rem;
+}
+.containerArrows button{
+    background-color: rgb(235, 235, 235);
+    height: 40px;
+    width: 40px;
+    margin: 0 .5rem;
+    border-radius: 50px;
+}
+
+.descriptionAndCant{
+    padding: 1rem;
+}
+.containerPrice{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.containerPriceDescont{
+    display: flex;
+    align-items: center;
+}
+.containerAddCant{
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+    background-color: rgb(235, 235, 235);
+    border-radius: .4rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+}
+.containerAddCant button{
+    padding: 0 1rem;
+    color: rgb(255, 115, 0);
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.imagesDesktop{
+    display: none;
+}
+.containerImagesProducts{
+    display: none;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+.containerImagesProducts img:hover{
+    opacity: 0.5;
+}
+
+#proveedor{
+    color: rgb(255, 115, 0);
+    font-size: .9rem;
+    font-weight: 600;
+}
+#titleProduct{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: .7rem 0;
+}
+#productDescription{
+    margin-bottom: 1.3rem;
+}
+#priceProductDescont{
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+#descont{
+    background-color: rgb(255, 211, 180);
+    color: rgb(255, 115, 0);
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: .1rem;
+    border-radius: .2rem;
+}
+#priceProductNormal{
+    color: gray;
+    font-weight: 500;
+    position: relative;
+}
+#priceProductNormal::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: gray;
+}
+#cantAdd{
+    font-weight: bold;
+}
+#addToCartButton{
+    width: 100%;
+    background-color: rgb(255, 115, 0);
+    height: 3rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+#addToCartButton i{
+    margin-right: 1rem;
+}
+
+@media (width >= 1280px){
+    .sliderImaegsMobile{
+        display: none;
+    }
+
+    .descriptionAndCant{
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        padding: 0 4rem;
+    }
+    .containerDescriptionAndCant{
+        width: 45%;
+        margin-left: 5rem;
+    }
+    .imagesDesktop{
+        display: block;
+        width: 50%;
+    }
+    .imagesDesktop img{
+        width: 100%;
+        border-radius: 1rem;
+    }
+    .containerCantAddCartDesktop{
+        display: flex ;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .containerAddCant{
+        margin: 0 1rem 0 0;
+    }
+    .containerPrice{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .containerImagesProducts{
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        width: 45%;
+    }
+    .containerImagesProducts img{
+        width: 45%;
+        margin-right: 1.8rem;
+        border: 3px solid transparent;
+        cursor: pointer;
+    }
+    .imageSlider.active{
+        opacity: 0.5;
+        border: 3px solid red;
+    }
+
+    #priceProductNormal{
+        margin-top: .5rem;
+    }
+    #productDescription {
+        margin-top: 1.5rem;
+        font-size: 22px;
+    }
+    #titleProduct{
+        font-size: 3.5rem;
+    }
+}

@@ -1,0 +1,207 @@
+.navBar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid rgb(209, 207, 207);
+    height: 60px;
+    position: relative;
+}
+.containerIcons{
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    padding: 0 .5rem;
+}
+.containerIcons button{
+    width: 100%;
+    margin: 0 .5rem;
+    cursor: pointer;
+}
+
+.containerLinksNavbar{
+    display: none;
+}
+.containerLinksNavbar a{
+    text-decoration: none;
+    margin: 0 .5rem;
+    font-weight: 500;
+    color: rgb(145, 145, 145);
+    position: relative;
+}
+.containerLinksNavbar a::after{
+    content: "";
+    width: 0%;
+    background-color: rgb(255, 119, 0);
+    height: 3px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    transition: all .3s ease-in-out;
+}
+.containerLinksNavbar a:hover::after{
+    width: 100%;
+}
+.containerLinksNavbar a:hover{
+    color: black;
+}
+
+.navBarMenu{
+    padding: 1.5rem 1.5rem;
+    top: 0;
+    position: absolute;
+    background-color: white;
+    width: 60%;
+    height: 100vh;
+    left: -17.5rem;
+    z-index: 20;
+    transition: .3s all ease-in-out;
+}
+.active.navBarMenu{
+    left: 0;
+}
+
+
+.containerLinksNavBarMenu{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.containerLinksNavBarMenu a{
+    text-decoration: none;
+    margin: .4rem 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: "Kumbh Sans", sans-serif;
+    color: black;
+    position: relative;
+}
+
+.containerCartShop{
+    position: absolute;
+    background-color: white;
+    border: 1px solid rgb(232, 232, 232);
+    width: 95%;
+    left: 0;
+    right: 0;
+    top: 4.5rem;
+    margin: 0 auto;
+    border-radius: .3rem;
+    height: 12rem;
+    visibility: hidden;
+    z-index: 20;
+}
+.containerCartShop p{
+    font-size: 1.1rem;
+}
+.active.containerCartShop{
+    visibility: visible;
+}
+.headerCartShop{
+    border-bottom: 1px solid black;
+    padding: 1rem;
+}
+.contentCartShop{
+    height: 8.6rem;
+}
+
+.containerArticleCart{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+}
+.active.containerArticleCart{
+    display: flex;
+}
+.containerArticleCart img{
+    width: 15%;
+    border-radius: .5rem;
+}
+.article{
+    padding: 1rem 0;
+    align-items: center;
+    color: rgb(161, 161, 161);
+    justify-content: space-between;
+    display: flex;
+}
+.containerPriceCart{
+    display: flex;
+}
+.containerPriceCart p{
+    margin: 0 .2rem;
+}
+
+.messageIsEmpty{
+    display: flex;
+    height: 8.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.active.messageIsEmpty{
+    display: none;
+}
+
+
+#avatarImage{
+    width: 20px;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    transition: all .3s ease-in-out;
+}
+#avatarImage:hover{
+    border-color: rgb(255, 119, 0);
+}
+#cant{
+    position: absolute;
+    bottom: 0.8rem;
+    left: 1.5rem;
+    background-color: rgb(255, 119, 0);
+    padding: 0rem 0.4rem;
+    border-radius: 1rem;
+    color: white;
+}
+#priceTotalCart{
+    font-weight: bold;
+    color: black;
+}
+#checkOutButton{
+    background-color: rgb(255, 119, 0);
+    width: 100%;
+    height: 2rem;
+    font-weight: bold;
+    color: white;
+    border-radius: .3rem;
+}
+
+@media (width >= 1280px){
+    #iconBurguer{
+        display: none;
+    }
+    .containerIcons{
+        padding: 0;
+        align-items: center;
+    }
+
+    .navBarMenu{
+        display: none;
+    }
+    .containerLinksNavbar{
+        display: flex;
+        align-items: center;
+        margin-left: 2.5rem;
+    }
+    #avatarImage{
+        width: 30px;
+    }
+    #cant{
+        bottom: 1.3rem;
+        left: 1.1rem;
+    }
+    .containerCartShop{
+        width: 30%;
+        left: 68%;
+        box-shadow: -10px 21px 33px -20px rgba(0,0,0,0.5);
+    }
+}

@@ -1,0 +1,29 @@
+.layoutContainer{
+    max-width: 375px;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.fondoOscuro{
+    position: absolute;
+    top: 0;
+    background-color: rgb(42, 42, 42);
+    opacity: 0.6;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    z-index: 10;
+}
+.active.fondoOscuro{
+    visibility: visible;
+}
+
+@media (width >= 1280px){
+    .layoutContainer{
+        min-width: 1280px;
+        overflow: visible;
+        
+    }
+}
