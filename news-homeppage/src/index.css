@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .readMoreButton{
+        @apply bg-orange-400 mt-4 w-48 h-12 text-white font-semibold tracking-[.5rem] hover:bg-blue-950 hover:text-white
+    }
+    .fondoOscuro{
+        @apply z-10 bg-black/60 w-[375px] h-screen absolute top-0 left-0 right-0 m-auto
+    }
+}
